@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app1" ng-init="person = {fName: 'Quentin', lName: 'Wehkamp'};">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="ctrl1">
+        
+        <span>Values:</span>
+        <input type="number" ng-model="first" />
+        <input type="number" ng-model="second" />
+
+        <button ng-click="updateValue()">Sum</button>
+        <br><br>
+
+        {{calculation}}
+
+        <p>5 + 5 = {{5+5}}</p>
+
+        <p>Your first value is {{first}}</p>
+
+        <p>Your second value is 
+            <span data-ng-bind="second"></span>
+        </p>
+
+        <p>{{person.fName + " " + person.lName}}</p>
+
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/1.js"></script>
+</body>
+</html>
